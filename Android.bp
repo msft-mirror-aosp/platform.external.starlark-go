@@ -35,12 +35,12 @@ bootstrap_go_package {
     name: "go-starlark-internal-compile",
     pkgPath: "go.starlark.net/internal/compile",
     srcs: [
-    	"internal/compile/compile.go",
-    	"internal/compile/serial.go",
+        "internal/compile/compile.go",
+        "internal/compile/serial.go",
     ],
     deps: [
-    	"go-starlark-syntax",
-    	"go-starlark-resolve",
+        "go-starlark-syntax",
+        "go-starlark-resolve",
     ],
 }
 
@@ -54,12 +54,12 @@ bootstrap_go_package {
     name: "go-starlark-resolve",
     pkgPath: "go.starlark.net/resolve",
     srcs: [
-    	"resolve/binding.go",
-    	"resolve/resolve.go",
+        "resolve/binding.go",
+        "resolve/resolve.go",
     ],
     deps: [
-    	"go-starlark-internal-spell",
-    	"go-starlark-syntax",
+        "go-starlark-internal-spell",
+        "go-starlark-syntax",
     ],
 }
 
@@ -67,11 +67,11 @@ bootstrap_go_package {
     name: "go-starlark-syntax",
     pkgPath: "go.starlark.net/syntax",
     srcs: [
-	"syntax/parse.go",
-	"syntax/quote.go",
-	"syntax/scan.go",
-	"syntax/syntax.go",
-	"syntax/walk.go",
+        "syntax/parse.go",
+        "syntax/quote.go",
+        "syntax/scan.go",
+        "syntax/syntax.go",
+        "syntax/walk.go",
     ],
 }
 
@@ -79,23 +79,23 @@ bootstrap_go_package {
     name: "go-starlark-starlark",
     pkgPath: "go.starlark.net/starlark",
     srcs: [
-    	"starlark/debug.go",
-    	"starlark/eval.go",
-    	"starlark/hashtable.go",
-    	"starlark/interp.go",
-    	"starlark/int_generic.go",
-    	"starlark/int.go",
-//    	"starlark/int_posix64.go",
-    	"starlark/library.go",
-    	"starlark/profile.go",
-    	"starlark/unpack.go",
-    	"starlark/value.go",
+        "starlark/debug.go",
+        "starlark/eval.go",
+        "starlark/hashtable.go",
+        "starlark/interp.go",
+        "starlark/int_generic.go",
+        "starlark/int.go",
+        //    	"starlark/int_posix64.go",
+        "starlark/library.go",
+        "starlark/profile.go",
+        "starlark/unpack.go",
+        "starlark/value.go",
     ],
     deps: [
-    	"go-starlark-internal-compile",
-    	"go-starlark-internal-spell",
-    	"go-starlark-resolve",
-    	"go-starlark-syntax",
+        "go-starlark-internal-compile",
+        "go-starlark-internal-spell",
+        "go-starlark-resolve",
+        "go-starlark-syntax",
     ],
 }
 
@@ -107,7 +107,17 @@ bootstrap_go_package {
         "starlarkstruct/struct.go",
     ],
     deps: [
-    	"go-starlark-starlark",
-    	"go-starlark-syntax",
+        "go-starlark-starlark",
+        "go-starlark-syntax",
+    ],
+}
+
+bootstrap_go_package {
+    name: "go-starlark-starlarktest",
+    pkgPath: "go.starlark.net/starlarktest",
+    srcs: ["starlarktest/starlarktest.go"],
+    deps: [
+        "go-starlark-starlark",
+        "go-starlark-starlarkstruct",
     ],
 }
