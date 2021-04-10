@@ -1,5 +1,6 @@
-//+build linux darwin dragonfly freebsd netbsd openbsd solaris
-//+build amd64 arm64,!darwin mips64x ppc64x
+// For the android builds, ignore this file to avoid dependency
+// on yet another package (golang.org/x/sys/unix)
+//+build ignore
 
 package starlark
 
