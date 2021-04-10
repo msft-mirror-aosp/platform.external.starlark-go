@@ -1,5 +1,6 @@
-//+build !linux,!darwin,!dragonfly,!freebsd,!netbsd,!openbsd,!solaris darwin,arm64 !amd64,!arm64,!mips64x,!ppc64x
-
+// Always use this implementation, even for Posix-compliant platforms
+// (upstream code uses the implementation in int_posix64.go, but we
+// do not want to depend on golang.olg/x.sys/unix package).
 package starlark
 
 // generic Int implementation as a union
