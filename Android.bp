@@ -113,6 +113,19 @@ bootstrap_go_package {
 }
 
 bootstrap_go_package {
+    name: "go-starlark-starlarkjson",
+    pkgPath: "go.starlark.net/starlarkjson",
+    srcs: [
+        "starlarkjson/json.go",
+    ],
+    deps: [
+        "go-starlark-starlark",
+        "go-starlark-starlarkstruct",
+    ],
+}
+
+
+bootstrap_go_package {
     name: "go-starlark-starlarktest",
     pkgPath: "go.starlark.net/starlarktest",
     srcs: ["starlarktest/starlarktest.go"],
