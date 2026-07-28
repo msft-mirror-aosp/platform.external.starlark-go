@@ -124,6 +124,23 @@ bootstrap_go_package {
     ],
 }
 
+bootstrap_go_package {
+    name: "go-starlark-starlarkproto",
+    pkgPath: "go.starlark.net/lib/proto",
+    srcs: [
+        "lib/proto/proto.go",
+    ],
+    deps: [
+        "go-starlark-starlark",
+        "go-starlark-starlarkstruct",
+        "go-starlark-syntax",
+        "golang-protobuf-encoding-prototext",
+        "golang-protobuf-proto",
+        "golang-protobuf-reflect-protoreflect",
+        "golang-protobuf-reflect-protoregistry",
+        "golang-protobuf-types-dynamicpb",
+    ],
+}
 
 bootstrap_go_package {
     name: "go-starlark-starlarktest",
